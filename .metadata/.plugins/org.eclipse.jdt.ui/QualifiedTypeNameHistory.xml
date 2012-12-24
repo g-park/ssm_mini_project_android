@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.opencv.samples.tutorial4.SampleViewBase"/>
+<fullyQualifiedTypeName name="org.opencv.samples.tutorial4.R.string"/>
+<fullyQualifiedTypeName name="android.hardware.Camera.PreviewCallback"/>
+<fullyQualifiedTypeName name="android.view.SurfaceHolder"/>
+</qualifiedTypeNameHistroy>

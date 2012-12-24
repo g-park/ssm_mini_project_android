@@ -1,0 +1,7 @@
+INDEX VERSION 1.126+/Users/garamsoft/dropboxGmail/Dropbox/shared/miniproject/OpenCV-2.4.1-android-bin2/.metadata/.plugins/org.eclipse.jdt.core
+3100994339.index
+219620147.index
+3664743279.index
+3012265620.index
+2398522642.index
+978472936.index

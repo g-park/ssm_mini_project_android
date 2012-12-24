@@ -1,0 +1,101 @@
+#include <jni.h>
+#include <opencv2/core/core.hpp>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
+#include <opencv/cxcore.h>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/features2d/features2d.hpp>
+#include <vector>
+
+#include <stdio.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <string.h>
+
+#include <android/log.h>
+
+using namespace std;
+using namespace cv;
+//#define LOG_TAG "FaceDetection/DetectionBasedTracker"
+//#define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__))
+
+extern "C" {
+
+char * data;
+int c_socket;//, s_socket;
+struct sockaddr_in c_addr;
+vector<int> param = vector<int>(2);
+const char * IP = "192.168.0.101";//"192.168.0.92";//집 : 192.168.0.101// 192.168.0.91
+
+
+JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_Connect(JNIEnv* env, jobject thiz ){
+
+
+				__android_log_print(ANDROID_LOG_INFO, "TIME_CHECK", "Connect Called");
+				param[0]=CV_IMWRITE_JPEG_QUALITY;
+				param[1]=70;//default(95) 0-100
+
+				c_socket = socket(PF_INET,SOCK_STREAM,0);
+
+		    	memset(&c_addr,0,sizeof(c_addr));
+
+		    	c_addr.sin_addr.s_addr = inet_addr(IP);
+
+		    	c_addr.sin_family = AF_INET;
+
+		    	c_addr.sin_port = htons(8888);
+
+		    	if(connect(c_socket,(struct sockaddr*) &c_addr, sizeof(c_addr))==-1){
+
+		    		close(c_socket);
+
+		    		return -1;
+		    	}
+		    	return 0;
+}
+
+//const *char jpg= ".jpg";
+JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_FindFeatures(JNIEnv* env, jobject thiz, jlong addrGray/*, jlong addrRgba*/)
+{
+//	    __android_log_print(ANDROID_LOG_INFO, "ENCODE_TIME", "FindFeature Called");
+    Mat pMatGr=*(Mat*)addrGray;
+//    Mat pMatRgb=*(Mat*)addrRgba;
+    vector<uchar> burf;
+
+
+//    __android_log_print(ANDROID_LOG_INFO, "ENCODE_TIME", "encode start");
+    imencode(".jpg", pMatGr, burf,param);
+//    __android_log_print(ANDROID_LOG_INFO, "ENCODE_TIME", "encode complete");
+
+
+    int bytes = 0;
+    int *dataSize = new int[1];
+    dataSize[0] = burf.size();
+    printf("dataSize : %d\n",(int)burf.size());
+
+
+//    NETWORK_TIME
+    __android_log_print(ANDROID_LOG_INFO, "NETWORK_TIME", "NETWORK_TIME start");
+    bytes = send(c_socket, dataSize, 4, 0);
+    bytes = send(c_socket,burf.data(),burf.size(),0);
+    __android_log_print(ANDROID_LOG_INFO, "NETWORK_TIME", "NETWORK_TIME start");
+
+    return 0;
+}
+
+JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_Disconnection(JNIEnv* env, jobject thiz ){
+	__android_log_print(ANDROID_LOG_INFO, "NETWORK_TIME", "disconnection Call");
+	 int bytes = 0;
+	 int *dataSize = new int[1];
+	dataSize[0] = -2;
+	bytes = send(c_socket, dataSize, 4, 0);
+	/*if(c_socket)*/ shutdown(c_socket , SHUT_RDWR);
+	//if(hServSock) shutdown(hServSock , SHUT_RDWR);
+
+    return 0;
+}
+
+
+
+}

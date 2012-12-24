@@ -1,0 +1,7 @@
+INDEX VERSION 1.126+/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/.metadata/.plugins/org.eclipse.jdt.core
+575785270.index
+3012265620.index
+2398522642.index
+978472936.index
+1005988900.index
+1932717058.index

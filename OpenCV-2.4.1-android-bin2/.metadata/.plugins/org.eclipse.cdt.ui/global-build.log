@@ -1,0 +1,244 @@
+
+**** Build of configuration Default for project Tutorial 3 (Advanced) - Add Native OpenCV ****
+
+/Users/garamsoft/android-ndk-r8b/ndk-build all 
+Prebuilt       : libnative_camera_r2.2.0.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r2.2.0.so => libs/armeabi-v7a/libnative_camera_r2.2.0.so
+Prebuilt       : libnative_camera_r2.3.3.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r2.3.3.so => libs/armeabi-v7a/libnative_camera_r2.3.3.so
+Prebuilt       : libnative_camera_r3.0.1.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r3.0.1.so => libs/armeabi-v7a/libnative_camera_r3.0.1.so
+Prebuilt       : libnative_camera_r4.0.0.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r4.0.0.so => libs/armeabi-v7a/libnative_camera_r4.0.0.so
+Prebuilt       : libnative_camera_r4.0.3.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r4.0.3.so => libs/armeabi-v7a/libnative_camera_r4.0.3.so
+Compile++ thumb  : native_sample <= jni_part.cpp
+In file included from jni/jni_part.cpp:1:0:
+/Users/garamsoft/android-ndk-r8b/platforms/android-14/arch-arm/usr/include/jni.h:592:13: note: the mangling of 'va_list' has changed in GCC 4.4
+Prebuilt       : libopencv_contrib.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_legacy.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_ml.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_stitching.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_nonfree.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_objdetect.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_calib3d.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_ts.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_videostab.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_photo.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_video.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_features2d.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_highgui.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_androidcamera.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_flann.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_imgproc.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_core.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libtbb.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : liblibjpeg.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : liblibpng.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : liblibtiff.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : liblibjasper.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : libgnustl_static.a <= <NDK>/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/
+SharedLibrary  : libnative_sample.so
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+Install        : libnative_sample.so => libs/armeabi-v7a/libnative_sample.so
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+
+**** Build Finished ****
+
+**** Build of configuration Default for project Tutorial 3 (Advanced) - Add Native OpenCV ****
+
+/Users/garamsoft/android-ndk-r8b/ndk-build all 
+Install        : libnative_camera_r2.2.0.so => libs/armeabi-v7a/libnative_camera_r2.2.0.so
+Install        : libnative_camera_r2.3.3.so => libs/armeabi-v7a/libnative_camera_r2.3.3.so
+Install        : libnative_camera_r3.0.1.so => libs/armeabi-v7a/libnative_camera_r3.0.1.so
+Install        : libnative_camera_r4.0.0.so => libs/armeabi-v7a/libnative_camera_r4.0.0.so
+Install        : libnative_camera_r4.0.3.so => libs/armeabi-v7a/libnative_camera_r4.0.3.so
+Install        : libnative_sample.so => libs/armeabi-v7a/libnative_sample.so
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Tutorial 3 (Advanced) - Add Native OpenCV ****
+
+/Users/garamsoft/android-ndk-r8b/ndk-build clean 
+Clean: gnustl_shared [armeabi-v7a]
+Clean: gnustl_static [armeabi-v7a]
+Clean: jasper [armeabi-v7a]
+Clean: jpeg [armeabi-v7a]
+Clean: native_camera_r2.2.0 [armeabi-v7a]
+Clean: native_camera_r2.3.3 [armeabi-v7a]
+Clean: native_camera_r3.0.1 [armeabi-v7a]
+Clean: native_camera_r4.0.0 [armeabi-v7a]
+Clean: native_camera_r4.0.3 [armeabi-v7a]
+Clean: native_sample [armeabi-v7a]
+Clean: opencv_androidcamera [armeabi-v7a]
+Clean: opencv_calib3d [armeabi-v7a]
+Clean: opencv_contrib [armeabi-v7a]
+Clean: opencv_core [armeabi-v7a]
+Clean: opencv_features2d [armeabi-v7a]
+Clean: opencv_flann [armeabi-v7a]
+Clean: opencv_highgui [armeabi-v7a]
+Clean: opencv_imgproc [armeabi-v7a]
+Clean: opencv_legacy [armeabi-v7a]
+Clean: opencv_ml [armeabi-v7a]
+Clean: opencv_nonfree [armeabi-v7a]
+Clean: opencv_objdetect [armeabi-v7a]
+Clean: opencv_photo [armeabi-v7a]
+Clean: opencv_stitching [armeabi-v7a]
+Clean: opencv_ts [armeabi-v7a]
+Clean: opencv_video [armeabi-v7a]
+Clean: opencv_videostab [armeabi-v7a]
+Clean: png [armeabi-v7a]
+Clean: tbb [armeabi-v7a]
+Clean: tiff [armeabi-v7a]
+
+**** Build Finished ****
+
+**** Build of configuration Default for project Tutorial 3 (Advanced) - Add Native OpenCV ****
+
+/Users/garamsoft/android-ndk-r8b/ndk-build all 
+Prebuilt       : libnative_camera_r2.2.0.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r2.2.0.so => libs/armeabi-v7a/libnative_camera_r2.2.0.so
+Prebuilt       : libnative_camera_r2.3.3.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r2.3.3.so => libs/armeabi-v7a/libnative_camera_r2.3.3.so
+Prebuilt       : libnative_camera_r3.0.1.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r3.0.1.so => libs/armeabi-v7a/libnative_camera_r3.0.1.so
+Prebuilt       : libnative_camera_r4.0.0.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r4.0.0.so => libs/armeabi-v7a/libnative_camera_r4.0.0.so
+Prebuilt       : libnative_camera_r4.0.3.so <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Install        : libnative_camera_r4.0.3.so => libs/armeabi-v7a/libnative_camera_r4.0.3.so
+Compile++ thumb  : native_sample <= jni_part.cpp
+In file included from jni/jni_part.cpp:1:0:
+/Users/garamsoft/android-ndk-r8b/platforms/android-14/arch-arm/usr/include/jni.h:592:13: note: the mangling of 'va_list' has changed in GCC 4.4
+Prebuilt       : libopencv_contrib.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_legacy.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_ml.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_stitching.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_nonfree.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_objdetect.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_calib3d.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_ts.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_videostab.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_photo.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_video.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_features2d.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_highgui.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_androidcamera.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_flann.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_imgproc.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libopencv_core.a <= ../../OpenCV-2.4.1/share/OpenCV/../../libs/armeabi-v7a/
+Prebuilt       : libtbb.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : liblibjpeg.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : liblibpng.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : liblibtiff.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : liblibjasper.a <= ../../OpenCV-2.4.1/share/OpenCV/3rdparty/libs/armeabi-v7a/
+Prebuilt       : libgnustl_static.a <= <NDK>/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/
+SharedLibrary  : libnative_sample.so
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+Install        : libnative_sample.so => libs/armeabi-v7a/libnative_sample.so
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+/Users/garamsoft/android-ndk-r8b/toolchains/arm-linux-androideabi-4.6/prebuilt/darwin-x86/bin/../lib/gcc/arm-linux-androideabi/4.6.x-google/../../../../arm-linux-androideabi/bin/ld: BFD (GNU Binutils) 2.21 assertion fail /Users/andrewhsieh/ndk-andrewhsieh/src/build/../binutils/binutils-2.21/bfd/elf32-arm.c:10190
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Tutorial 3 (Advanced) - Add Native OpenCV ****
+
+/Users/garamsoft/android-ndk-r8b/ndk-build clean 
+Clean: gnustl_shared [armeabi-v7a]
+Clean: gnustl_static [armeabi-v7a]
+Clean: jasper [armeabi-v7a]
+Clean: jpeg [armeabi-v7a]
+Clean: native_camera_r2.2.0 [armeabi-v7a]
+Clean: native_camera_r2.3.3 [armeabi-v7a]
+Clean: native_camera_r3.0.1 [armeabi-v7a]
+Clean: native_camera_r4.0.0 [armeabi-v7a]
+Clean: native_camera_r4.0.3 [armeabi-v7a]
+Clean: native_sample [armeabi-v7a]
+Clean: opencv_androidcamera [armeabi-v7a]
+Clean: opencv_calib3d [armeabi-v7a]
+Clean: opencv_contrib [armeabi-v7a]
+Clean: opencv_core [armeabi-v7a]
+Clean: opencv_features2d [armeabi-v7a]
+Clean: opencv_flann [armeabi-v7a]
+Clean: opencv_highgui [armeabi-v7a]
+Clean: opencv_imgproc [armeabi-v7a]
+Clean: opencv_legacy [armeabi-v7a]
+Clean: opencv_ml [armeabi-v7a]
+Clean: opencv_nonfree [armeabi-v7a]
+Clean: opencv_objdetect [armeabi-v7a]
+Clean: opencv_photo [armeabi-v7a]
+Clean: opencv_stitching [armeabi-v7a]
+Clean: opencv_ts [armeabi-v7a]
+Clean: opencv_video [armeabi-v7a]
+Clean: opencv_videostab [armeabi-v7a]
+Clean: png [armeabi-v7a]
+Clean: tbb [armeabi-v7a]
+Clean: tiff [armeabi-v7a]
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Tutorial 3 (Advanced) - Add Native OpenCV ****
+
+/Users/garamsoft/android-ndk-r8b/ndk-build clean 
+Clean: gnustl_shared [armeabi-v7a]
+Clean: gnustl_static [armeabi-v7a]
+Clean: jasper [armeabi-v7a]
+Clean: jpeg [armeabi-v7a]
+Clean: native_camera_r2.2.0 [armeabi-v7a]
+Clean: native_camera_r2.3.3 [armeabi-v7a]
+Clean: native_camera_r3.0.1 [armeabi-v7a]
+Clean: native_camera_r4.0.0 [armeabi-v7a]
+Clean: native_camera_r4.0.3 [armeabi-v7a]
+Clean: native_sample [armeabi-v7a]
+Clean: opencv_androidcamera [armeabi-v7a]
+Clean: opencv_calib3d [armeabi-v7a]
+Clean: opencv_contrib [armeabi-v7a]
+Clean: opencv_core [armeabi-v7a]
+Clean: opencv_features2d [armeabi-v7a]
+Clean: opencv_flann [armeabi-v7a]
+Clean: opencv_highgui [armeabi-v7a]
+Clean: opencv_imgproc [armeabi-v7a]
+Clean: opencv_legacy [armeabi-v7a]
+Clean: opencv_ml [armeabi-v7a]
+Clean: opencv_nonfree [armeabi-v7a]
+Clean: opencv_objdetect [armeabi-v7a]
+Clean: opencv_photo [armeabi-v7a]
+Clean: opencv_stitching [armeabi-v7a]
+Clean: opencv_ts [armeabi-v7a]
+Clean: opencv_video [armeabi-v7a]
+Clean: opencv_videostab [armeabi-v7a]
+Clean: png [armeabi-v7a]
+Clean: tbb [armeabi-v7a]
+Clean: tiff [armeabi-v7a]
+
+**** Build Finished ****

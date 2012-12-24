@@ -1,0 +1,36 @@
+
+**** Clean-only build of configuration Default for project Tutorial 3 (Advanced) - Add Native OpenCV ****
+
+/Users/garamsoft/android-ndk-r8b/ndk-build clean 
+Clean: gnustl_shared [armeabi-v7a]
+Clean: gnustl_static [armeabi-v7a]
+Clean: jasper [armeabi-v7a]
+Clean: jpeg [armeabi-v7a]
+Clean: native_camera_r2.2.0 [armeabi-v7a]
+Clean: native_camera_r2.3.3 [armeabi-v7a]
+Clean: native_camera_r3.0.1 [armeabi-v7a]
+Clean: native_camera_r4.0.0 [armeabi-v7a]
+Clean: native_camera_r4.0.3 [armeabi-v7a]
+Clean: native_sample [armeabi-v7a]
+Clean: opencv_androidcamera [armeabi-v7a]
+Clean: opencv_calib3d [armeabi-v7a]
+Clean: opencv_contrib [armeabi-v7a]
+Clean: opencv_core [armeabi-v7a]
+Clean: opencv_features2d [armeabi-v7a]
+Clean: opencv_flann [armeabi-v7a]
+Clean: opencv_highgui [armeabi-v7a]
+Clean: opencv_imgproc [armeabi-v7a]
+Clean: opencv_legacy [armeabi-v7a]
+Clean: opencv_ml [armeabi-v7a]
+Clean: opencv_nonfree [armeabi-v7a]
+Clean: opencv_objdetect [armeabi-v7a]
+Clean: opencv_photo [armeabi-v7a]
+Clean: opencv_stitching [armeabi-v7a]
+Clean: opencv_ts [armeabi-v7a]
+Clean: opencv_video [armeabi-v7a]
+Clean: opencv_videostab [armeabi-v7a]
+Clean: png [armeabi-v7a]
+Clean: tbb [armeabi-v7a]
+Clean: tiff [armeabi-v7a]
+
+**** Build Finished ****
