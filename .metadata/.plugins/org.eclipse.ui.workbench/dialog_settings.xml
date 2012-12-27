@@ -11,6 +11,19 @@
 			<item value="/Users/garamsoft/Development/백업/back_up_android_project/miniple1221.zip"/>
 		</list>
 	</section>
+	<section name="ShowViewDialog">
+		<item value="308" key="DIALOG_WIDTH"/>
+		<item value="org.eclipse.debug.ui.BreakpointView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="95" key="DIALOG_Y_ORIGIN"/>
+		<item value="529" key="DIALOG_X_ORIGIN"/>
+		<item value="415" key="DIALOG_HEIGHT"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui"/>
+			<item value="org.eclipse.cdt.ui.views"/>
+			<item value="org.eclipse.debug.ui"/>
+		</list>
+	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 		<item value="true" key="uncategorizedFilter"/>
 		<item value="true" key="internalFilter"/>

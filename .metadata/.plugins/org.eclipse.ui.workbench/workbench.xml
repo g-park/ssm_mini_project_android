@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="36" version="2.0">
+<workbench progressCount="33" version="2.0">
 <workbenchAdvisor/>
-<window height="742" maximized="true" width="1188" x="133" y="22">
+<window height="742" maximized="true" width="1283" x="0" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -17,7 +17,7 @@
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="70" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="32" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="120" y="22"/>
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="32" y="22"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="32" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -25,10 +25,13 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -38,27 +41,72 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="1"/>
 <part id="0"/>
+<part id="1"/>
 <part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="jni_part.cpp" partName="jni_part.cpp" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/OpenCV-2.4.1-samples/AndroidClient01/jni/jni_part.cpp" title="jni_part.cpp" tooltip="AndroidClient01/jni/jni_part.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidClient01/jni/jni_part.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="56" selectionOffset="1950" selectionTopPixel="785"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mesh.java" partName="Mesh.java" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/src/graphics/shaders/Mesh.java" title="Mesh.java" tooltip="AndroidShaders/src/graphics/shaders/Mesh.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/src/graphics/shaders/Mesh.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sample4View.java" partName="Sample4View.java" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/OpenCV-2.4.1-samples/AndroidClient01/src/org/opencv/samples/tutorial4/Sample4View.java" title="Sample4View.java" tooltip="AndroidClient01/src/org/opencv/samples/tutorial4/Sample4View.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidClient01/src/org/opencv/samples/tutorial4/Sample4View.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1358" selectionTopPixel="842"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Object3D.java" partName="Object3D.java" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/src/graphics/shaders/Object3D.java" title="Object3D.java" tooltip="AndroidShaders/src/graphics/shaders/Object3D.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/src/graphics/shaders/Object3D.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Handler.class" partName="Handler.class" title="Handler.class" tooltip="android.os.Handler" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=AndroidClient01/\/Users\/garamsoft\/android-sdks\/platforms\/android-14\/android.jar&lt;android.os(Handler.class"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Renderer.java" partName="Renderer.java" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/src/graphics/shaders/Renderer.java" title="Renderer.java" tooltip="AndroidShaders/src/graphics/shaders/Renderer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/src/graphics/shaders/Renderer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="1830" selectionTopPixel="2256"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Shader.java" partName="Shader.java" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/src/graphics/shaders/Shader.java" title="Shader.java" tooltip="AndroidShaders/src/graphics/shaders/Shader.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/src/graphics/shaders/Shader.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="3494" selectionTopPixel="707"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShaderActivity.java" partName="ShaderActivity.java" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/src/graphics/shaders/ShaderActivity.java" title="ShaderActivity.java" tooltip="AndroidShaders/src/graphics/shaders/ShaderActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/src/graphics/shaders/ShaderActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5293" selectionTopPixel="1926"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="gouraud_ps.txt" partName="gouraud_ps.txt" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/res/raw/gouraud_ps.txt" title="gouraud_ps.txt" tooltip="AndroidShaders/res/raw/gouraud_ps.txt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/res/raw/gouraud_ps.txt"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="288" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="gouraud_vs.txt" partName="gouraud_vs.txt" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/res/raw/gouraud_vs.txt" title="gouraud_vs.txt" tooltip="AndroidShaders/res/raw/gouraud_vs.txt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/res/raw/gouraud_vs.txt"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="394" selectionTopPixel="135"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="normalmap_ps.txt" partName="normalmap_ps.txt" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/res/raw/normalmap_ps.txt" title="normalmap_ps.txt" tooltip="AndroidShaders/res/raw/normalmap_ps.txt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/res/raw/normalmap_ps.txt"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="298" selectionTopPixel="60"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="octahedron.txt" partName="octahedron.txt" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/res/raw/octahedron.txt" title="octahedron.txt" tooltip="AndroidShaders/res/raw/octahedron.txt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/res/raw/octahedron.txt"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="phong_ps.txt" partName="phong_ps.txt" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/res/raw/phong_ps.txt" title="phong_ps.txt" tooltip="AndroidShaders/res/raw/phong_ps.txt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/res/raw/phong_ps.txt"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="456"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="phong_vs.txt" partName="phong_vs.txt" path="/Users/garamsoft/dropboxGmail/Dropbox/developspace/miniproject_1212to1301/OpenCV-2.4.1-android-bin2/shader_/AndroidShaders/res/raw/phong_vs.txt" title="phong_vs.txt" tooltip="AndroidShaders/res/raw/phong_vs.txt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AndroidShaders/res/raw/phong_vs.txt"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
@@ -486,6 +534,8 @@
 <view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -518,11 +568,13 @@
 </folder>
 </info>
 <info folder="true" part="bottom" ratio="0.74923545" ratioLeft="490" ratioRight="164" relationship="4" relative="org.eclipse.ui.internal.ViewStack@a66e3f">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.74975467" ratioLeft="764" ratioRight="255" relationship="2" relative="org.eclipse.ui.internal.ViewStack@a66e3f">
@@ -533,19 +585,21 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="254" ratioRight="762" relationship="2" relative="org.eclipse.ui.internal.ViewStack@a66e3f"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d84476" ratio="0.74923545" ratioLeft="490" ratioRight="164" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d84476" ratio="0.59600616" ratioLeft="388" ratioRight="263" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -556,160 +610,169 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidClient01/src/org/opencv/samples/tutorial4/Sample4View.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidClient01/src/org/opencv/samples/tutorial4/SampleViewBase.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AndroidClient01/jni/jni_part.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AndroidClient01/jni/jni_part.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidShaders/src/graphics/shaders/ShaderActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidShaders/src/graphics/shaders/Renderer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AndroidShaders/res/raw/gouraud_ps.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AndroidShaders/res/raw/gouraud_vs.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidShaders/src/graphics/shaders/Shader.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidShaders/src/graphics/shaders/Mesh.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidShaders/src/graphics/shaders/Object3D.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidShaders/src/graphics/shaders/ShaderActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AndroidShaders/gen/graphics/shaders/R.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AndroidShaders/res/raw/normalmap_ps.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AndroidShaders/res/raw/octahedron.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AndroidShaders/res/raw/phong_ps.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AndroidShaders/res/raw/phong_vs.txt"/>
 </editors>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="7224" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="7548" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="3056" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="3349" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="7224" y="0"/>
+<item historyLabel="ShaderActivity.java" index="0">
+<position info="not_deleted" x="1436" y="14"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="7548" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="2002" y="12"/>
+<item historyLabel="ShaderActivity.java" index="0">
+<position info="not_deleted" x="1436" y="14"/>
 </item>
-<item historyLabel="jni_part.cpp" index="2">
-<position info="not_deleted" x="1950" y="56"/>
+<item historyLabel="Shader.java" index="4">
+<position info="not_deleted" x="5" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="7548" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="6" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="1572" y="0"/>
+<item historyLabel="Mesh.java" index="5">
+<position info="not_deleted" x="5" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5339" y="0"/>
+<item historyLabel="Object3D.java" index="6">
+<position info="not_deleted" x="5" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5203" y="0"/>
+<item historyLabel="ShaderActivity.java" index="7">
+<position info="not_deleted" x="1822" y="8"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="3737" y="0"/>
+<item historyLabel="ShaderActivity.java" index="7">
+<position info="not_deleted" x="5534" y="0"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="1358" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="696" y="8"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="3762" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="3237" y="0"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="3056" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="3270" y="0"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="3349" y="0"/>
+<item historyLabel="R.java" index="8">
+<position info="not_deleted" x="1618" y="10"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="7224" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="3270" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="7548" y="0"/>
+<item historyLabel="gouraud_ps.txt" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="3056" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="3270" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5479" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="3253" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5339" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="1269" y="14"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5203" y="0"/>
+<item historyLabel="ShaderActivity.java" index="7">
+<position info="not_deleted" x="5534" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="3737" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position info="not_deleted" x="5" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="1590" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="9809" y="0"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="1358" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position info="not_deleted" x="932" y="6"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="3762" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="10299" y="13"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="1590" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position info="not_deleted" x="932" y="6"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="3015" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="10299" y="13"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="819" y="11"/>
+<item historyLabel="Shader.java" index="4">
+<position info="not_deleted" x="932" y="6"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="7014" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position info="not_deleted" x="2502" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5339" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position info="not_deleted" x="3105" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5203" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="4749" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="3737" y="0"/>
+<item historyLabel="Shader.java" index="4">
+<position info="not_deleted" x="3494" y="10"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="1358" y="0"/>
+<item historyLabel="ShaderActivity.java" index="7">
+<position info="not_deleted" x="5293" y="0"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="3762" y="0"/>
+<item historyLabel="gouraud_ps.txt" index="2">
+<position info="not_deleted" x="288" y="9"/>
 </item>
-<item historyLabel="jni_part.cpp" index="2">
-<position info="not_deleted" x="1950" y="56"/>
+<item historyLabel="gouraud_vs.txt" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="3737" y="0"/>
+<item historyLabel="normalmap_ps.txt" index="9">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="1871" y="0"/>
+<item historyLabel="octahedron.txt" index="10">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5339" y="0"/>
+<item historyLabel="phong_ps.txt" index="11">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="5203" y="0"/>
+<item historyLabel="phong_vs.txt" index="12">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="3737" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="6380" y="8"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="1358" y="0"/>
+<item historyLabel="gouraud_vs.txt" index="3">
+<position info="not_deleted" x="394" y="8"/>
 </item>
-<item historyLabel="Sample4View.java" index="0">
-<position info="not_deleted" x="1358" y="0"/>
+<item historyLabel="gouraud_vs.txt" index="3">
+<position info="not_deleted" x="956" y="8"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="3737" y="0"/>
+<item historyLabel="gouraud_vs.txt" index="3">
+<position info="not_deleted" x="394" y="8"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="1765" y="0"/>
+<item historyLabel="normalmap_ps.txt" index="9">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="1922" y="15"/>
+<item historyLabel="normalmap_ps.txt" index="9">
+<position info="not_deleted" x="298" y="8"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="1410" y="10"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="5846" y="9"/>
 </item>
-<item historyLabel="SampleViewBase.java" index="1">
-<position info="not_deleted" x="1639" y="0"/>
+<item historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="5702" y="0"/>
 </item>
-<item active="true" historyLabel="jni_part.cpp" index="3">
-<position info="not_deleted" x="1950" y="56"/>
+<item active="true" historyLabel="Renderer.java" index="1">
+<position info="not_deleted" x="1830" y="10"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -717,9 +780,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -728,43 +788,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1d84476"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Camera.class" tooltip="android.hardware.Camera">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=AndroidClient01/\/Users\/garamsoft\/android-sdks\/platforms\/android-14\/android.jar&lt;android.hardware(Camera.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="phong_vs.txt" tooltip="AndroidShaders/res/raw/phong_vs.txt">
+<persistable path="/AndroidShaders/res/raw/phong_vs.txt"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Thread.class" tooltip="java.lang.Thread">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=AndroidClient01/\/Users\/garamsoft\/android-sdks\/platforms\/android-14\/android.jar&lt;java.lang(Thread.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="phong_ps.txt" tooltip="AndroidShaders/res/raw/phong_ps.txt">
+<persistable path="/AndroidShaders/res/raw/phong_ps.txt"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="SurfaceView.class" tooltip="android.view.SurfaceView">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=AndroidClient01/\/Users\/garamsoft\/android-sdks\/platforms\/android-14\/android.jar&lt;android.view(SurfaceView.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="octahedron.txt" tooltip="AndroidShaders/res/raw/octahedron.txt">
+<persistable path="/AndroidShaders/res/raw/octahedron.txt"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sample4Mixed.java" tooltip="AndroidClient01/src/org/opencv/samples/tutorial4/Sample4Mixed.java">
-<persistable path="/AndroidClient01/src/org/opencv/samples/tutorial4/Sample4Mixed.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="normalmap_ps.txt" tooltip="AndroidShaders/res/raw/normalmap_ps.txt">
+<persistable path="/AndroidShaders/res/raw/normalmap_ps.txt"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SampleCvViewBase.java" tooltip="Tutorial 2 (Basic) - Use OpenCV Camera/src/org/opencv/samples/tutorial2/SampleCvViewBase.java">
-<persistable path="/Tutorial 2 (Basic) - Use OpenCV Camera/src/org/opencv/samples/tutorial2/SampleCvViewBase.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="gouraud_vs.txt" tooltip="AndroidShaders/res/raw/gouraud_vs.txt">
+<persistable path="/AndroidShaders/res/raw/gouraud_vs.txt"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Handler.class" tooltip="android.os.Handler">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=AndroidClient01/\/Users\/garamsoft\/android-sdks\/platforms\/android-14\/android.jar&lt;android.os(Handler.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="gouraud_ps.txt" tooltip="AndroidShaders/res/raw/gouraud_ps.txt">
+<persistable path="/AndroidShaders/res/raw/gouraud_ps.txt"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sample4View.java" tooltip="AndroidClient01/src/org/opencv/samples/tutorial4/Sample4View.java">
-<persistable path="/AndroidClient01/src/org/opencv/samples/tutorial4/Sample4View.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="AndroidShaders/gen/graphics/shaders/R.java">
+<persistable path="/AndroidShaders/gen/graphics/shaders/R.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SampleViewBase.java" tooltip="AndroidClient01/src/org/opencv/samples/tutorial4/SampleViewBase.java">
-<persistable path="/AndroidClient01/src/org/opencv/samples/tutorial4/SampleViewBase.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShaderActivity.java" tooltip="AndroidShaders/src/graphics/shaders/ShaderActivity.java">
+<persistable path="/AndroidShaders/src/graphics/shaders/ShaderActivity.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DetectionBasedTracker.java" tooltip="Sample - face-detection/src/org/opencv/samples/fd/DetectionBasedTracker.java">
-<persistable path="/Sample - face-detection/src/org/opencv/samples/fd/DetectionBasedTracker.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Shader.java" tooltip="AndroidShaders/src/graphics/shaders/Shader.java">
+<persistable path="/AndroidShaders/src/graphics/shaders/Shader.java"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="StringBuilder.class" tooltip="java.lang.StringBuilder">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=AndroidClient01/\/Users\/garamsoft\/android-sdks\/platforms\/android-14\/android.jar&lt;java.lang(StringBuilder.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Renderer.java" tooltip="AndroidShaders/src/graphics/shaders/Renderer.java">
+<persistable path="/AndroidShaders/src/graphics/shaders/Renderer.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="AndroidClient01/AndroidManifest.xml">
-<persistable path="/AndroidClient01/AndroidManifest.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Object3D.java" tooltip="AndroidShaders/src/graphics/shaders/Object3D.java">
+<persistable path="/AndroidShaders/src/graphics/shaders/Object3D.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mesh.java" tooltip="AndroidShaders/src/graphics/shaders/Mesh.java">
+<persistable path="/AndroidShaders/src/graphics/shaders/Mesh.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="tetrahedron.txt" tooltip="AndroidShaders/res/raw/tetrahedron.txt">
+<persistable path="/AndroidShaders/res/raw/tetrahedron.txt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="game_menu.xml" tooltip="AndroidShaders/res/menu/game_menu.xml">
+<persistable path="/AndroidShaders/res/menu/game_menu.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="texturedcube.txt" tooltip="AndroidShaders/res/raw/texturedcube.txt">
+<persistable path="/AndroidShaders/res/raw/texturedcube.txt"/>
 </file>
 </mruList>
 </workbench>

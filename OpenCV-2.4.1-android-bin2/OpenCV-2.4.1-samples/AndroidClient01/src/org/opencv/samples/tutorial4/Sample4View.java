@@ -23,7 +23,7 @@ class Sample4View extends SampleViewBase {
 
     private int mViewMode;
 	private Bitmap mBitmap;
-	private int connection;
+	private int connection = -1;
 
     public Sample4View(Context context) {
         super(context);
@@ -46,7 +46,7 @@ class Sample4View extends SampleViewBase {
 
 	@Override
 	protected void onPreviewStopped() {
-		
+		DisConnect();
 		if (mBitmap != null) {
 			mBitmap.recycle();
 			mBitmap = null;
@@ -70,6 +70,7 @@ class Sample4View extends SampleViewBase {
 	}
 
 
+	
     @Override
     protected Bitmap processFrame(byte[] data) {
     	Log.i("garam", "processFrame(byte[] data)");
@@ -129,13 +130,13 @@ class Sample4View extends SampleViewBase {
     
     public void connectServer(){
 
-        if(connection == 0){
-        	int result = Connect();//(mGraySubmat.getNativeObjAddr(), mRgba.getNativeObjAddr());
-        	Log.i("test", "result : Connected "+result);
-        }
-        else{
-        	Log.i("test","result : unConnection");
-        }
+//        if(connection == 0){
+        	connection = Connect();//(mGraySubmat.getNativeObjAddr(), mRgba.getNativeObjAddr());
+        	Log.i("test", "result : Connected "+connection);
+//        }
+//        else{
+//        	Log.i("test","result : unConnection");
+//        }
     }
     
 

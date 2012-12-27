@@ -24,7 +24,7 @@ char * data;
 int c_socket;//, s_socket;
 struct sockaddr_in c_addr;
 
-char * ID_ADDRESS = "192.168.0.225";//192.168.1.140
+char * ID_ADDRESS = "192.168.0.101";//192.168.1.140
 
 vector<int> param = vector<int>(2);
 

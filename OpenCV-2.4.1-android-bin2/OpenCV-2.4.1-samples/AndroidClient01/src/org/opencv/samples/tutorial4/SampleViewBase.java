@@ -33,6 +33,7 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
         super(context);
         mHolder = getHolder();
         mHolder.addCallback(this);
+        mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         Log.i(TAG, "Instantiated new " + this.getClass());
         
     }
@@ -48,10 +49,10 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
     @SuppressLint("NewApi")
 	@TargetApi(11)
 	public void setPreview() throws IOException {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-            mCamera.setPreviewTexture( new SurfaceTexture(10) );
-        else
-        	mCamera.setPreviewDisplay(null);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+////            mCamera.setPreviewTexture( new SurfaceTexture(10) );
+//        else
+        	mCamera.setPreviewDisplay(mHolder);
 	}
     
     public boolean openCamera() {
@@ -63,13 +64,14 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
         	return false;
         }
 
-        mCamera.setPreviewCallbackWithBuffer(new PreviewCallback() {
-            public void onPreviewFrame(byte[] data, Camera camera) {
-                synchronized (SampleViewBase.this) {
-                    System.arraycopy(data, 0, mFrame, 0, data.length);
-                    SampleViewBase.this.notify(); 
-                }
-                camera.addCallbackBuffer(mBuffer);
+        mCamera.setPreviewCallbackWithBuffer(
+        		new PreviewCallback() {
+        			public void onPreviewFrame(byte[] data, Camera camera) {
+        				synchronized (SampleViewBase.this) {
+        					System.arraycopy(data, 0, mFrame, 0, data.length);
+        					SampleViewBase.this.notify(); 
+        					}
+        				camera.addCallbackBuffer(mBuffer);
             }
         });
         return true;
@@ -194,15 +196,15 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
                 }
             }
             
-            if (bmp != null) {
-                Canvas canvas = mHolder.lockCanvas();
-                if (canvas != null) {
-                	Bitmap resized = Bitmap.createScaledBitmap(bmp, Sample4Mixed.displayWidth, Sample4Mixed.displayHeight, true);
-//                    canvas.drawBitmap(bmp, (canvas.getWidth() - getFrameWidth()) / 2, (canvas.getHeight() - getFrameHeight()) / 2, null);
-                	canvas.drawBitmap(resized, 0, 0, null);
-                    mHolder.unlockCanvasAndPost(canvas);
-                }
-            }
+//            if (bmp != null) {
+//                Canvas canvas = mHolder.lockCanvas();
+//                if (canvas != null) {
+//                	Bitmap resized = Bitmap.createScaledBitmap(bmp, Sample4Mixed.displayWidth, Sample4Mixed.displayHeight, true);
+////                    canvas.drawBitmap(bmp, (canvas.getWidth() - getFrameWidth()) / 2, (canvas.getHeight() - getFrameHeight()) / 2, null);
+//                	canvas.drawBitmap(resized, 0, 0, null);
+//                    mHolder.unlockCanvasAndPost(canvas);
+//                }
+//            }
         }
     }
 }

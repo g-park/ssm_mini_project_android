@@ -1,6 +1,5 @@
 package com.ssm.cameratracker;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -15,7 +14,6 @@ import android.graphics.YuvImage;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.Size;
-import android.os.StrictMode;
 import android.util.Log;
 
 public class CreateSocketThread extends Thread{
@@ -96,7 +94,7 @@ public class CreateSocketThread extends Thread{
 			File file;
 			file=new File("/sdcard/ssm"+"/test"+testInt+".jpg");
 			
-			StrictMode.enableDefaults();
+//			StrictMode.enableDefaults();
 			tcpClient=new TCPClient(file, "test"+testInt+".jpg", socket);
 			
 //			/** 리턴 값을 받아오면? Camera interface를 호출하는 것?*/

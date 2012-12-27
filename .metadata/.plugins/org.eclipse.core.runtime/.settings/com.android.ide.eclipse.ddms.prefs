@@ -1,9 +1,9 @@
-#Fri Dec 21 21:59:48 KST 2012
+#Wed Dec 26 03:21:00 KST 2012
 logcat.view.colsize.Text=545
 logcat.view.colsize.TID=46
 logcat.view.colsize.Level=18
 ddms.logcat.automonitor.userprompt=true
-logcat.view.colsize.Application=135
+logcat.view.colsize.Application=201
 logcat.view.colsize.PID=46
 logcat.view.colsize.Tag=101
 ddms.logcat.auotmonitor.level=error
