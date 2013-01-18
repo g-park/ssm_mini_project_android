@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1118/trunk/Samples/AndroidDemo/Demo
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1049/trunk/Samples/AndroidDemo/Demo/.classpath
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1039/trunk/Samples/AndroidDemo/Demo/project.properties
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1039/trunk/Samples/AndroidDemo/Demo/.project
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1039/trunk/Samples/AndroidDemo/Demo/AndroidManifest.xml
+END

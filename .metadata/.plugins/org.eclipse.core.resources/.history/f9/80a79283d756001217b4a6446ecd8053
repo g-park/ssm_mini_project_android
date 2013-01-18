@@ -1,0 +1,7 @@
+package com.example.testshader;
+
+import android.opengl.GLSurfaceView;
+
+public class Renderer extends GLSurfaceView.Renderer {
+
+}

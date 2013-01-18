@@ -1,0 +1,68 @@
+package com.example.testshader;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
+
+import android.content.Context;
+import android.opengl.GLSurfaceView;
+
+public class Renderer implements GLSurfaceView.Renderer {
+
+	private Context mContext;
+
+	/***************************
+	 * CONSTRUCTOR(S)
+	 **************************/
+	public Renderer(Context context) {
+
+		mContext = context;
+
+		// setup all the shaders
+		vShaders = new int[3];
+		fShaders = new int[3];
+
+		// basic - just gouraud shading
+		vShaders[GOURAUD_SHADER] = R.raw.gouraud_vs;
+		fShaders[GOURAUD_SHADER] = R.raw.gouraud_ps;
+
+		// phong shading
+		vShaders[PHONG_SHADER] = R.raw.phong_vs;
+		fShaders[PHONG_SHADER] = R.raw.phong_ps;
+
+		// normal mapping
+		vShaders[NORMALMAP_SHADER] = R.raw.normalmap_vs;
+		fShaders[NORMALMAP_SHADER] = R.raw.normalmap_ps;
+
+		// Create some objects - pass in the textures, the meshes
+		try {
+			int[] normalMapTextures = {R.raw.diffuse_old, R.raw.diffusenormalmap_deepbig};
+			_objects[0] = new Object3D(R.raw.octahedron, false, context);
+			_objects[1] = new Object3D(R.raw.tetrahedron, false, context);
+			_objects[2] = new Object3D(normalMapTextures, R.raw.texturedcube, true, context);
+		} catch (Exception e) {
+			//showAlert("" + e.getMessage());
+		}
+
+		// set current object and shader
+		_currentObject = this.OCTAHEDRON;
+		_currentShader = this.GOURAUD_SHADER;
+	}
+	@Override
+	public void onDrawFrame(GL10 gl) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onSurfaceChanged(GL10 gl, int width, int height) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onSurfaceCreated(GL10 gl, EGLConfig config) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

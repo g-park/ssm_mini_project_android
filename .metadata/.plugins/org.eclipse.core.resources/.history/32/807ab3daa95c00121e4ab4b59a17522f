@@ -1,0 +1,64 @@
+package com.androidhuman.example.CameraPreview;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
+
+import android.hardware.Camera;
+import android.hardware.Camera.PreviewCallback;
+import android.opengl.GLSurfaceView.Renderer;
+import android.util.Log;
+
+public class GLRenderer implements Renderer, PreviewCallback {
+
+	@Override
+	public void onDrawFrame(GL10 gl) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onSurfaceChanged(GL10 gl, int width, int height) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onSurfaceCreated(GL10 gl, EGLConfig config) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPreviewFrame(byte[] data, Camera camera) {
+
+		
+		mYUV.put( 0, 0, data);
+		
+//		if(isConnected && isBack)
+//		new Thread(this).start();
+		
+		if(isConnected && isBack)
+		{
+			isBack = false;
+			if(0==FindFeatures(mGrayY.getNativeObjAddr())){
+				isBack = true;		
+			}
+		}
+		
+		System.arraycopy(data, 0, yData, 0, LENGTH);
+		yBuffer.put(yData);
+		yBuffer.position(0);
+		Log.e("AndARRendDefTest", "yData: " + yData.length);
+
+		System.arraycopy(data, U_INDEX, uData, 0, LENGTH_4);
+		uBuffer.put(uData);
+		uBuffer.position(0);
+//		Log.e("AndARRendDefTest", "uData: " + uData.length);
+		
+		System.arraycopy(data, V_INDEX, vData, 0, LENGTH_4);
+		vBuffer.put(vData);
+		vBuffer.position(0);
+//		Log.e("AndARRendDefTest", "vData: " + vData.length);
+	}
+
+}

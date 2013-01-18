@@ -1,0 +1,5 @@
+package com.example.testshader;
+
+public class Renderer extends GLSurfaceView.Renderer {
+
+}

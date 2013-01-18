@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1085/trunk/BlenderAddon/game_gamekit
+END
+ui.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/999/trunk/BlenderAddon/game_gamekit/ui.py
+END
+operators.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1085/trunk/BlenderAddon/game_gamekit/operators.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/874/trunk/BlenderAddon/game_gamekit/__init__.py
+END
+config.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/672/trunk/BlenderAddon/game_gamekit/config.py
+END

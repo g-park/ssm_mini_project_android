@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Application.mk&apos; to &apos;jni&apos;&#x0A;- Original project: &apos;FilterGL130111&apos;&#x0A;- Destination element: &apos;jni&apos;&#x0A;- Original element: &apos;Application.mk&apos;" description="Copy file" element1="jni/Application.mk" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1357981940655" target="/FilterGL/jni" units="0" version="1.0"/>
+</session>

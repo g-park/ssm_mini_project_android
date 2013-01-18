@@ -43,10 +43,10 @@ public class ShaderActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		// Create a new GLSurfaceView - this holds the GL Renderer
+		// GLSurfaceView 생성 - GL Renderer를 들고 있음. Create a new GLSurfaceView - this holds the GL Renderer
 		mGLSurfaceView = new GLSurfaceView(this);
 
-		// detect if OpenGL ES 2.0 support exists - if it doesn't, exit.
+		// OpenGL ES 2.0를 지원하는 지 확인함. detect if OpenGL ES 2.0 support exists - if it doesn't, exit.
 		if (detectOpenGLES20()) {
 			// Tell the surface view we want to create an OpenGL ES 2.0-compatible
 			// context, and set an OpenGL ES 2.0-compatible renderer.
@@ -55,7 +55,8 @@ public class ShaderActivity extends Activity {
 			mGLSurfaceView.setRenderer(renderer);
 		} 
 		else { // quit if no support - get a better phone! :P
-			this.finish();
+//			this.finish();
+			quit();
 		}
 
 		// set the content view
@@ -105,9 +106,6 @@ public class ShaderActivity extends Activity {
 		case R.id.normal_map:		// Normal Mapping
 			renderer.setShader(this.NORMALMAP_SHADER);
 			return true;
-		case R.id.quit:				// Quit the program
-			quit();
-			return true;
 		case R.id.cube:				// Cube
 			renderer.setObject(this.CUBE);
 			return true;
@@ -119,6 +117,9 @@ public class ShaderActivity extends Activity {
 			return true;
 		case R.id.texture:			// Enable/disable texturing
 			renderer.flipTexturing();
+			return true;
+		case R.id.quit:				// Quit the program
+			quit();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -183,6 +184,8 @@ public class ShaderActivity extends Activity {
 	private float spacing(MotionEvent event) {
 		float x = event.getX(0) - event.getX(1);
 		float y = event.getY(0) - event.getY(1);
+		
+		//공간의 크기를 보내는것?
 		return FloatMath.sqrt(x * x + y * y);
 	}
 
@@ -199,33 +202,34 @@ public class ShaderActivity extends Activity {
 
 	private GLSurfaceView mGLSurfaceView;
 
-	// The Renderer
+	// The Renderer 그리는 것에 관
 	Renderer renderer;
 
-	// rotation
+	// rotation 회전에 관한
 	private final float TOUCH_SCALE_FACTOR = 180.0f / 320;
 	private float mPreviousX;
 	private float mPreviousY;
 
-	// shader constants
+	// shader constants 쉐이더관련 상수 변수
 	private final int GOURAUD_SHADER = 0;
 	private final int PHONG_SHADER = 1;
 	private final int NORMALMAP_SHADER = 2;
 
 
-	// object constants
+	// object constants 객체에 관한 변수
 	private final int OCTAHEDRON = 0;
 	private final int TETRAHEDRON = 1;
 	private final int CUBE = 2;
 
-	// touch events
+	// touch events 터치 이벤트에 관한 변수
 	private final int NONE = 0;
 	private final int DRAG = 0;
 	private final int ZOOM = 0;
 
-	// pinch to zoom
+	// pinch to zoom 줍을 하기 위한 피치..?
 	float oldDist = 100.0f;
 	float newDist;
 
+	//모드
 	int mode = 0;
 }

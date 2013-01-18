@@ -1,0 +1,2 @@
+set solib-search-path ./obj/local/armeabi
+directory /Users/garamsoft/android-ndk-r8b/platforms/android-8/arch-arm/usr/include jni armeabi/ffmpeg_build/include /Users/garamsoft/android-ndk-r8b/sources/cxx-stl/system

@@ -13,6 +13,22 @@
 #include <arpa/inet.h>
 #include <string.h>
 
+
+#include <sys/time.h>
+
+#ifndef	__ANDROID_LOG_H__
+#define	__ANDROID_LOG_H__
+
+#include <android/log.h>
+
+#define	LOGV(...)	__android_log_print(ANDROID_LOG_VERBOSE, "libnav", __VA_ARGS__)
+#define	LOGD(...)	__android_log_print(ANDROID_LOG_DEBUG, "libnav", __VA_ARGS__)
+#define	LOGI(...)	__android_log_print(ANDROID_LOG_INFO, "libnav", __VA_ARGS__)
+#define	LOGW(...)	__android_log_print(ANDROID_LOG_WARN, "libnav", __VA_ARGS__)
+#define	LOGE(...)	__android_log_print(ANDROID_LOG_ERROR, "libnav", __VA_ARGS__)
+
+#endif /* __ANDROID_LOG_H__ */
+
 using namespace std;
 using namespace cv;
 //#define LOG_TAG "FaceDetection/DetectionBasedTracker"
@@ -24,9 +40,17 @@ char * data;
 int c_socket;//, s_socket;
 struct sockaddr_in c_addr;
 
-char * ID_ADDRESS = "192.168.0.101";//192.168.1.140
+char * ID_ADDRESS = "192.168.0.14";//"192.168.0.4";//"192.168.0.101";//"192.168.0.92";//"192.168.0.101";//192.168.1.140
 
 vector<int> param = vector<int>(2);
+
+/**시간 측정을 위한 변수 시작*/
+struct timeval start, end;
+
+long mtime, seconds, useconds;
+
+/**시간 측정을 위한 변수 끝*/
+
 
 /**
  * 서버와 연결하는 함수
@@ -35,7 +59,7 @@ vector<int> param = vector<int>(2);
 JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_Connect(JNIEnv* env, jobject thiz ){
 
 			param[0]=CV_IMWRITE_JPEG_QUALITY;
-		    param[1]=60;//default(95) 0-100
+		    param[1]=70;//default(95) 0-100
 
 			c_socket = socket(PF_INET,SOCK_STREAM,0);
 
@@ -55,7 +79,9 @@ JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_Connect(JNI
 /**
  * 이미지를 압축해서 보내는 함수
  * */
-JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_FindFeatures(JNIEnv* env, jobject thiz, jlong addrGray, jlong addrRgba)
+char buffer[50] = "";
+
+JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_FindFeatures(JNIEnv* env, jobject thiz, jlong addrGray)
 {
     /**
      * 알고리즘
@@ -69,8 +95,10 @@ JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_FindFeature
     //IplImage trans = IplImage(*pMatGr);
 
     //1 이미지를 압축한다.
+
     imencode(".jpg", *pMatGr, burf,param);
 
+//    gettimeofday(&start, NULL);
     //2 압축된 이미지의 사이즈를 구한 후 보낸다.
     int bytes = 0;
     int *dataSize = new int[1];
@@ -78,7 +106,11 @@ JNIEXPORT jint JNICALL Java_org_opencv_samples_tutorial4_Sample4View_FindFeature
     send(c_socket, dataSize, 4, 0);
 
     bytes = send(c_socket,burf.data(),burf.size(),0);
-
+//    gettimeofday(&end, NULL);
+//       seconds  = end.tv_sec  - start.tv_sec;
+//       useconds = end.tv_usec - start.tv_usec;
+//       mtime = ((seconds) * 1000 + useconds/1000.0) + 0.5;
+//       sprintf(buffer,"time %d",mtime);LOGI(buffer);
     return 0;
 }
 

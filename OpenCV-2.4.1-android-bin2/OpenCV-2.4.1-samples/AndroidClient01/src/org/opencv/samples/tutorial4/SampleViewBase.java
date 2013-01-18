@@ -7,12 +7,9 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.ImageFormat;
-import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
-import android.os.Build;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -97,8 +94,15 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
             if (mCamera != null) {
                 Camera.Parameters params = mCamera.getParameters();
 //                List<Camera.Size> sizes = params.getSupportedPreviewSizes();
-                mFrameWidth = 640;
-                mFrameHeight = 480;
+                
+                if(Sample4View.VIEW_320_240){
+                mFrameWidth = 320;
+                mFrameHeight = 240;
+                }
+                else{
+                	mFrameWidth = 640;
+                    mFrameHeight = 480;
+                }
                 Log.i("SIZE","size : "+ width +" "+ height);
                 // selecting optimal camera preview size
 //                {
@@ -115,10 +119,14 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
                 params.setPreviewSize(getFrameWidth(), getFrameHeight());
                 
                 List<String> FocusModes = params.getSupportedFocusModes();
-                if (FocusModes.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO))
+                if (FocusModes.contains(Camera.Parameters.FOCUS_MODE_AUTO))
                 {
-                	params.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO);
+                	params.setFocusMode(Camera.Parameters.FLASH_MODE_AUTO);
                 }            
+//                if (FocusModes.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO))
+//                {
+//                	params.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO);
+//                }            
                 
                 mCamera.setParameters(params);
                 
@@ -164,7 +172,7 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
 
 
     /* The bitmap returned by this method shall be owned by the child and released in onPreviewStopped() */
-    protected abstract Bitmap processFrame(byte[] data);
+    protected abstract void processFrame(byte[] data);
 
     /**
      * This method is called when the preview process is being started. It is called before the first frame delivered and processFrame is called
@@ -185,26 +193,15 @@ public abstract class SampleViewBase extends SurfaceView implements SurfaceHolde
         mThreadRun = true;
         Log.i(TAG, "Starting processing thread");
         while (mThreadRun) {
-            Bitmap bmp = null;
 
             synchronized (this) {
                 try {
                     this.wait();
-                    bmp = processFrame(mFrame);
+                    processFrame(mFrame);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-            
-//            if (bmp != null) {
-//                Canvas canvas = mHolder.lockCanvas();
-//                if (canvas != null) {
-//                	Bitmap resized = Bitmap.createScaledBitmap(bmp, Sample4Mixed.displayWidth, Sample4Mixed.displayHeight, true);
-////                    canvas.drawBitmap(bmp, (canvas.getWidth() - getFrameWidth()) / 2, (canvas.getHeight() - getFrameHeight()) / 2, null);
-//                	canvas.drawBitmap(resized, 0, 0, null);
-//                    mHolder.unlockCanvasAndPost(canvas);
-//                }
-//            }
         }
     }
 }

@@ -1,0 +1,277 @@
+
+package com.filtergl.shader;
+
+import java.io.IOException;
+
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
+import android.content.pm.ConfigurationInfo;
+import android.graphics.ImageFormat;
+import android.hardware.Camera;
+import android.hardware.Camera.Parameters;
+import android.opengl.GLSurfaceView;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.SurfaceHolder;
+import android.view.SurfaceHolder.Callback;
+import android.view.SurfaceView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.Toast;
+
+public class ActivityFilterGL extends Activity implements Callback{
+	private static final String TAG = ActivityFilterGL.class.getSimpleName();
+
+	//openGL이 그리는 표면.
+	private GLSurfaceView glSurfaceView;
+	//그려주는 렌더러.
+	private GLRenderer renderer;
+
+	//하드웨어 카메라.
+	private Camera camera;
+	
+	//프리뷰를 잡고있는 홀더..
+	private SurfaceHolder mSurfaceHolder = null;
+	
+	//미리보기 뷰..
+	private Preview previewSurface;
+	
+	private Context mContext;
+
+	//멈췄나?
+	private boolean mPausing = false;
+	private boolean surfaceCreated = false;
+	private boolean startPreviewRightAway;
+	private boolean previewing  = false;
+
+	//액티비티가 실행 되었을 때, 스타트 프리뷰 어웨이가 true가 되어서 시작 됨을 알림.
+	public ActivityFilterGL() {
+		startPreviewRightAway = true;
+	}
+
+	public ActivityFilterGL(boolean startPreviewRightAway) {
+		this.startPreviewRightAway = startPreviewRightAway;
+	}
+
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		mContext = getApplicationContext();
+
+		//전체 화면 모드와 꺼지지 않게 모드 설정함.
+		setFullscreen();
+		disableScreenTurnOff();
+		
+		if(!detectOpenGLES20())Toast.makeText(mContext, "OpenGL ES 2.0 을 지원하지 않습니다.", 0).show();
+
+		FrameLayout frame = new FrameLayout(this);
+		
+		previewSurface = new Preview(this);
+//		previewSurface.setVisibility(View.INVISIBLE);
+		glSurfaceView = new GLSurfaceView(this);
+		renderer = new GLRenderer(this);
+		
+		glSurfaceView.setEGLContextClientVersion(2);//매우 중요 2.0를 사용하기 위해서는 꼭 필요함.
+		glSurfaceView.setRenderer(renderer);
+		glSurfaceView.getHolder().addCallback(this);
+		
+		frame.addView(previewSurface);
+		frame.addView(glSurfaceView);
+		
+		Button btn = new Button(getApplicationContext());
+		btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(0==Connect()){
+					Toast.makeText(mContext, "Connected", 0).show();
+					renderer.isConnected = true;
+					renderer.isBack = true;
+				}
+				else
+				{
+					Toast.makeText(mContext, "Not Connected", 0).show();
+				}
+				
+			}
+		});
+		frame.addView(btn, new LayoutParams(100, 100));
+
+		setContentView(frame);
+	}
+
+	public void disableScreenTurnOff() {
+		getWindow().setFlags(
+							WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
+							WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+	}
+
+	public void setFullscreen() {
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setFlags(
+							WindowManager.LayoutParams.FLAG_FULLSCREEN,
+							WindowManager.LayoutParams.FLAG_FULLSCREEN);
+	}
+
+	@Override
+	protected void onPause() {
+		DisConnect();
+		mPausing = true;
+		this.glSurfaceView.onPause();
+		super.onPause();
+		finish();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		System.runFinalization();
+	}
+
+	@Override
+	protected void onResume() {
+		mPausing = false;
+		glSurfaceView.onResume();
+		super.onResume();
+	}
+
+
+	private void openCamera() {
+		if (camera == null) {
+			camera = CameraHolder.instance().open();
+
+			try {
+				camera.setPreviewDisplay(mSurfaceHolder);
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+
+			Parameters params = camera.getParameters();
+//			params.setPreviewFormat(ImageFormat.NV21);
+			camera.setParameters(params);
+
+			renderer.setPreviewFrameSize(
+					camera.getParameters().getPreviewSize().width,
+					camera.getParameters().getPreviewSize().height
+					);
+             
+			camera.setPreviewCallback(renderer);
+		}
+	}
+
+	private void closeCamera() {
+		if (camera != null) {
+			CameraHolder.instance().keep();
+			CameraHolder.instance().release();
+			camera = null;
+			previewing = false;
+		}
+	}
+
+	public void startPreview() {
+		if (!surfaceCreated) {
+			return;
+		}
+		if (mPausing || isFinishing()) {
+			return;
+		}
+		if (previewing) {
+			stopPreview();
+		}
+		openCamera();
+		camera.startPreview();
+		previewing = true;
+	}
+
+	private void stopPreview() {
+		if (camera != null && previewing) {
+			previewing = false;
+			camera.stopPreview();
+		}
+
+	}
+
+	@Override
+	public void surfaceChanged(SurfaceHolder holder, int format, int width,int height) {}
+
+
+	@Override
+	public void surfaceCreated(SurfaceHolder holder) {
+		surfaceCreated = true;
+	}
+
+	@Override
+	public void surfaceDestroyed(SurfaceHolder holder) {}
+
+	class Preview extends SurfaceView implements SurfaceHolder.Callback {
+
+		SurfaceHolder mHolder;
+		Camera mCamera;
+
+		Preview(Context context) {
+			super(context);
+//			mHolder = getHolder();
+//			mHolder.addCallback(this);
+//			mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+			mSurfaceHolder = getHolder();
+			mSurfaceHolder.addCallback(this);
+			mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+	
+		}
+		
+		@Override
+		public void surfaceChanged(SurfaceHolder holder, int format, int w,int h) {
+			
+		}
+
+		@Override
+		protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+			 this.setMeasuredDimension(2, 2);
+		}
+
+		@Override
+		public void surfaceCreated(SurfaceHolder holder) {
+			mSurfaceHolder = holder;
+			if (startPreviewRightAway) {
+				//바뀌면 프리뷰를 스타트함..?
+				startPreview();
+			}			
+		}
+
+		@Override
+		public void surfaceDestroyed(SurfaceHolder holder) {
+			//프리뷰를 멈추고
+			stopPreview();
+			//하드웨어 카메라를 정지 시킴.
+			closeCamera();
+			//서페이스 홀더를 놓아
+			mSurfaceHolder = null;
+		}
+
+		
+	}
+
+	  public native int Connect();
+	  public native int DisConnect();
+	  
+	  static {
+			System.loadLibrary("opencv_java");
+	        System.loadLibrary("mixed_sample");
+		}
+	  
+	  private boolean detectOpenGLES20() {
+			ActivityManager am =
+				(ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+			ConfigurationInfo info = am.getDeviceConfigurationInfo();
+			Log.d("OpenGL Ver:", info.getGlEsVersion());
+			return (info.reqGlEsVersion >= 0x20000);
+		}
+}

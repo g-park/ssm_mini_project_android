@@ -12,16 +12,13 @@ import java.nio.ShortBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLUtils;
 import android.opengl.Matrix;
-import android.os.SystemClock;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -151,8 +148,8 @@ class Renderer implements GLSurfaceView.Renderer {
 	 * Draw function - called for every frame
 	 */
 	public void onDrawFrame(GL10 glUnused) {
-		// Ignore the passed-in GL10 interface, and use the GLES20
-		// class's static methods instead.
+		// Ignore the passed-in GL10 interface, and use the GLES20 class's static methods instead.
+		GLES20.glClearColor(0, 0, 0, 0);
 		GLES20.glClearColor(.0f, .0f, .0f, 1.0f);
 		GLES20.glClear( GLES20.GL_DEPTH_BUFFER_BIT | GLES20.GL_COLOR_BUFFER_BIT);
 
@@ -286,7 +283,8 @@ class Renderer implements GLSurfaceView.Renderer {
 	 * Initialization function
 	 */
 	public void onSurfaceCreated(GL10 glUnused, EGLConfig config) {
-		// initialize shaders
+		
+		//1. initialize shaders
 		try {
 			_shaders[GOURAUD_SHADER] = new Shader(vShaders[GOURAUD_SHADER], fShaders[GOURAUD_SHADER], mContext, false, 0); // gouraud
 			_shaders[PHONG_SHADER] = new Shader(vShaders[PHONG_SHADER], fShaders[PHONG_SHADER], mContext, false, 0); // phong
@@ -295,7 +293,7 @@ class Renderer implements GLSurfaceView.Renderer {
 			Log.d("SHADER 0 SETUP", e.getLocalizedMessage());
 		}
 
-		//GLES20.glEnable   ( GLES20.GL_DEPTH_TEST );
+		//2. GLES20.glEnable   ( GLES20.GL_DEPTH_TEST );
 		GLES20.glClearDepthf(1.0f);
 		GLES20.glDepthFunc( GLES20.GL_LEQUAL );
 		GLES20.glDepthMask( true );

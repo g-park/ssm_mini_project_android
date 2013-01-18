@@ -1,0 +1,27 @@
+#Fri Jan 11 14:27:32 KST 2013
+errorIndicationColor=156,248,40
+comment2Color=140,63,200
+AbstractTextEditor.Color.Background=25,25,25
+othersIndicationColor=255,255,255
+warningIndicationColor=71,116,136
+eclipse.preferences.version=1
+taskIndicationColor=128,0,128
+AbstractTextEditor.Color.Foreground.SystemDefault=false
+operatorColor=255,255,255
+AbstractTextEditor.Color.Foreground=255,255,255
+markupColor=255,255,255
+currentLineColor=34,34,32
+keyword1Color=236,105,30
+literal1Color=71,116,136
+printMarginColor=102,102,102
+bookmarkIndicationColor=129,69,130
+numberColor=71,116,136
+AbstractTextEditor.Color.Background.SystemDefault=false
+functionColor=247,197,39
+lineNumberColor=102,102,102
+keyword2Color=247,197,39
+literal2Color=71,116,136
+variableColor=60,117,141
+comment1Color=129,70,162
+invalidColor=255,255,255
+labelColor=255,255,255

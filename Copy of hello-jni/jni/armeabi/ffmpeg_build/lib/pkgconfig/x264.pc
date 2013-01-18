@@ -1,0 +1,11 @@
+prefix=/Users/garamsoft/my-android-toolchain/sysroot/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: x264
+Description: H.264 (MPEG4 AVC) encoder library
+Version: 0.129.2230 1cffe9f
+Libs: -L${exec_prefix}/lib -lx264
+Libs.private:  -lm
+Cflags: -I${prefix}/include

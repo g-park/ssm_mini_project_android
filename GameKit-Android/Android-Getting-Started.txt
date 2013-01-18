@@ -1,0 +1,47 @@
+Caution:
+gamekit for android is by far not optimal at the moment in case of android-lifecycle
+shutting down, file-handling, no sound and more... 
+
+Caution2: This project is precompiled for androideabi-v7a
+
+Ok here we go:
+
+I assume you have android-sdk installed and running for eclipse
+If not have a look here: 
+http://developer.android.com/sdk/installing/index.html
+http://developer.android.com/tools/sdk/eclipse-adt.html
+
+To get started:
+1) Start eclipse
+2) File->Import...->General->Existing Projects into Workspace->next
+3) Browse to this folder->ok
+4) Select GamekitAndroid->Finish
+
+To start the tiny demo:
+5) right-click on your project->Run as->Android Application
+6) See suzanne jumping around in a tiny demo. Control via accelerometer. 
+
+To get you project on the device:
+7) copy your blend-file in the asset-folder and name it gk_android.blend
+7a) if copied outside eclipse refresh project to sync with filesystem (right-click project->refresh)
+
+
+How to get started with developing? 
+
+0)Install the blender-addon (see BlenderAddon-Installation.txt)
+
+1)Read the WIKI:
+http://code.google.com/p/gamekit/w/list
+
+2)Download the full sourcecode via svn:
+svn checkout http://gamekit.googlecode.com/svn/trunk/ gamekit
+and have a look at the Samples. Especially Samples/Runtime/Regression have lots of small samples.
+
+3)blender'S gamekit 2-book 
+http://wiki.blender.org/index.php/Doc:2.4/Books/GameKit_2
+
+This will give you a good idea how to use blender to make games. BUT CAUTION: Blender Game Engine
+and GameKit are not compatible everywhere. e.g. BGE is scripted in python, gamekit in lua...andandand
+
+4)Ask at http://gamekit.org , but remember: Gamekit is 100% community-driven, very bad to not documented and
+you won't get into it if you are not able to get your hands dirty...

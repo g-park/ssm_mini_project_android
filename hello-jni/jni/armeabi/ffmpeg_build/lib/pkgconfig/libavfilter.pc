@@ -1,0 +1,14 @@
+prefix=/Users/garamsoft/ffmpeg_bulid
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg video filtering library
+Version: 3.30.101
+Requires: 
+Requires.private: libpostproc = 52.2.100, libswresample = 0.17.102, libswscale = 2.1.103, libavformat = 54.50.104, libavcodec = 54.81.100, libavutil = 52.12.100
+Conflicts:
+Libs: -L${libdir} -lavfilter 
+Libs.private: -lx264 -lm -lz
+Cflags: -I${includedir}

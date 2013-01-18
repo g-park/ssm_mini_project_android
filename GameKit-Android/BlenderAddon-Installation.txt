@@ -1,0 +1,28 @@
+Quickstart:
+- copy the two folder from the BlenderAddon-Folder into Blender's AddOn-Folder
+- enable the plugin: file->user preferences->Add-Ons: check "Game Engine:Gamekit Engine"
+- set temp-folder to a valid location (if not already): file->user preferences->File: Temp-Folder
+- Set Render-Engine from "Blender Render" to "Gamekit"
+- In Render-View set the path to the Runtime
+
+Troubleshooting:
+- no gamekit visible in addons? => be sure to only copy the two(!) folders IN the GameKit's BlenderAddon-Folder to Blender's AddOn-Folder :D
+- ... ask in http://gamekit.org
+
+How to get started? 
+
+1)Read the WIKI:
+http://code.google.com/p/gamekit/w/list
+
+2)Download the full sourcecode via svn:
+svn checkout http://gamekit.googlecode.com/svn/trunk/ gamekit
+and have a look at the Samples. Especially Samples/Runtime/Regression have lots of small samples.
+
+3)blender'S gamekit 2-book 
+http://wiki.blender.org/index.php/Doc:2.4/Books/GameKit_2
+
+This will give you a good idea how to use blender to make games. BUT CAUTION: Blender Game Engine
+and GameKit are not compatible everywhere. e.g. BGE is scripted in python, gamekit in lua...andandand
+
+4)Ask at http://gamekit.org , but remember: Gamekit is 100% community-driven, very bad to not documented and
+you won't get into it if you are not able to get your hands dirty...

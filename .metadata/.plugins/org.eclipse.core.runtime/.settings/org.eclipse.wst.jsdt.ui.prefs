@@ -1,11 +1,31 @@
-#Sat Dec 15 17:12:26 KST 2012
-useQuickDiffPrefPage=true
-tabWidthPropagated=true
-proposalOrderMigrated=true
+#Fri Jan 11 14:27:32 KST 2013
+java_doc_keyword=128,0,128
+semanticHighlighting.methodDeclarationName.color=241,196,56
+java_default=255,255,255
+tagName=247,197,39
+java_string=71,116,136
+java_keyword_return=236,105,30
+java_comment_task_tag=128,0,128
+semanticHighlighting.localVariableDeclaration.color=53,122,146
+java_doc_tag=128,0,128
+java_keyword=236,105,30
+semanticHighlighting.localVariable.enabled=true
+semanticHighlighting.methodDeclarationName.enabled=true
+java_single_line_comment=129,70,162
+semanticHighlighting.localVariableDeclaration.enabled=true
 useAnnotationsPrefPage=true
-org.eclipse.jface.textfont=1|Monaco|11.0|0|COCOA|1|;
-org.eclipse.wst.jsdt.ui.javadoclocations.migrated=true
 eclipse.preferences.version=1
+org.eclipse.jface.textfont=1|Monaco|11.0|0|COCOA|1|;
+tabWidthPropagated=true
 fontPropagated=true
+proposalOrderMigrated=true
+java_multi_line_comment=140,63,200
+java_bracket=255,255,255
+org.eclipse.wst.jsdt.ui.javadoclocations.migrated=true
 org.eclipse.wst.jsdt.ui.editor.tab.width=
+java_doc_link=129,69,130
+java_operator=255,255,255
+useQuickDiffPrefPage=true
+java_doc_default=140,63,200
+semanticHighlighting.localVariable.color=60,117,141
 org.eclipse.wst.jsdt.ui.formatterprofiles.version=11

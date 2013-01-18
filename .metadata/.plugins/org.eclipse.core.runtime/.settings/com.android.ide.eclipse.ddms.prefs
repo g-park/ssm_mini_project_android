@@ -1,4 +1,4 @@
-#Wed Dec 26 03:21:00 KST 2012
+#Sun Jan 13 01:26:57 KST 2013
 logcat.view.colsize.Text=545
 logcat.view.colsize.TID=46
 logcat.view.colsize.Level=18
@@ -9,4 +9,4 @@ logcat.view.colsize.Tag=101
 ddms.logcat.auotmonitor.level=error
 logcat.view.colsize.Time=140
 eclipse.preferences.version=1
-logcat.view.filters.list=name\: 'TEST', tag\: 'test', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'garamgaram', tag\: 'garam', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'Skz', tag\: 'SIZE', text\: '', pid\: '', app\: '', level\: 'verbose', 
+logcat.view.filters.list=name\: 'garamgaram', tag\: 'garam', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'Skz', tag\: 'SIZE', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'DEBUG_TAG', tag\: 'DEBUG_TAG', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'VideoKit', tag\: 'VideoKit', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'Renderer', tag\: 'Renderer', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'libnavlibnav', tag\: 'libnav', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'AndARRendDefTest', tag\: 'AndARRendDefTest', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'READPX', tag\: 'READPX', text\: '', pid\: '', app\: '', level\: 'verbose', name\: 'CameraPreview', tag\: 'CameraPreview', text\: '', pid\: '', app\: '', level\: 'verbose', 
